@@ -3,9 +3,11 @@ const length = Number(input.dataset.length);
 const callback = (event) => {
     const symbolsOfUser = event.currentTarget.value.length;
     if (symbolsOfUser === length) {
-        input.style.borderColor = "#4caf50";
+        input.classList.add("valid");
+        input.classList.remove("invalid");
     } else {
-        input.style.borderColor = "#f44336";
+        input.classList.remove("valid");
+        input.classList.add("invalid");
     }
 };
 input.addEventListener("blur", callback);
