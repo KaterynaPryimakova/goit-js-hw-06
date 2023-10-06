@@ -12,7 +12,7 @@ function callback(event) {
         email: userEmail,
         password: userPassWord,
     };
-    if (userEmail !== "" || userPassWord !== "") {
+    if (userEmail !== "" && userPassWord !== "") {
         console.log(userInfo);
     }
     event.target.reset();
